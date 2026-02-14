@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TabAutoCloser config</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container animate-in">
+      <header>
+        <h1>TabAutoCloser</h1>
+        <p class="description">
+          Configure URLs and text patterns that should trigger closing a tab.
+          Save time and keep your browser clean.
+        </p>
+      </header>
+
+      <div class="card">
+        <h2 style="font-size: 1.125rem; margin-bottom: 1.25rem">
+          Add New Rule
+        </h2>
+        <div class="form-group">
+          <label for="url">URL (e.g. https://auth.mycompany.com)</label>
+          <input type="text" id="url" placeholder="https://..." required />
+        </div>
+        <div class="form-group">
+          <label for="matchText">Text to Match (e.g. Login Successful)</label>
+          <input type="text" id="matchText" placeholder="Message..." required />
+        </div>
+        <button id="addRule" class="primary">Add Rule</button>
+      </div>
+
+      <div class="card">
+        <h2 style="font-size: 1.125rem; margin-bottom: 1.25rem">
+          Active Rules
+        </h2>
+        <div id="rulesListItems" class="rules-list">
+          <!-- Configured Rules -->
+          <div class="empty-state">No rules configured yet.</div>
+        </div>
+      </div>
+    </div>
+    <script src="options.js"></script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TabAutoCloser</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        width: 300px;
+        padding: 1rem;
+      }
+      .status {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+      .status-dot {
+        width: 10px;
+        height: 10px;
+        background: var(--success);
+        border-radius: 50%;
+        box-shadow: 0 0 10px var(--success);
+      }
+      .mini-card {
+        padding: 0.75rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        font-size: 0.8125rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="status">
+      <div class="status-dot"></div>
+      <span style="font-weight: 600">TabAutoCloser Active</span>
+    </div>
+
+    <div class="mini-card">
+      <div id="ruleCount">Loading rules...</div>
+    </div>
+
+    <button id="openOptions" class="primary" style="width: 100%">
+      Configure Rules
+    </button>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
